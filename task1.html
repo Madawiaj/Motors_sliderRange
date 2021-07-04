@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>Motors</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="php" href="/php/task.php">
+<style>
+  body{
+background-color: rgb(211, 184, 151);
+
+  }
+  header{
+    background-color: rgb(99, 76, 90);
+    padding-top: 70px;
+    min-height: 40px;
+  }
+
+.motors {
+  width: 20%;
+}
+
+.slider1 {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 10px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+.slider2 {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+.slider3 {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+.slider4 {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider5 {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+.slider6 {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+.slider:hover {
+  opacity: 1;
+}
+
+.slider1::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 20px;
+  border: 2;
+  background: url('slider.png');
+  cursor: pointer;
+}
+.slider2::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 20px;
+  border: 2;
+  background: url('slider.png');
+  cursor: pointer;
+}
+.slider3::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 20px;
+  border: 2;
+  background: url('slider.png');
+  cursor: pointer;
+}
+.slider4::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 20px;
+  border: 2;
+  background: url('slider.png');
+  cursor: pointer;
+}
+.slider5::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 20px;
+  border: 2;
+  background: url('slider.png');
+  cursor: pointer;
+}
+.slider6::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 20px;
+  border: 2;
+  background: url('slider.png');
+  cursor: pointer;
+}
+p1{
+  float: right; 
+}
+button {
+  background-color: rgb(99, 76, 90);
+  border:khaki;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 20px 20px;
+  cursor: pointer;
+}
+</style>
+</head>
+<header>
+  <h1></h1>
+</header>
+<body>
+  <form action="task.php">
+<div class="motors">
+  <p1>:المحرك الأول</p1>
+  <input type="range" min="0" max="180" value="90" class="slider1" id="myRange1">
+  <p>Value: <span id="motor1"></span></p>
+  <p1>:المحرك الثاني</p1>
+  <input type="range" min="0" max="180" value="90" class="slider2" id="myRange2">
+  <p>Value: <span id="motor2"></span></p>
+  <p1>:المحرك الثالث</p1>
+    <input type="range" min="0" max="180" value="90" class="slider3" id="myRange3">
+  <p>Value: <span id="motor3"></span></p>
+  <p1>:المحرك الرابع</p1>
+     <input type="range" min="0" max="180" value="90" class="slider4" id="myRange4">
+  <p>Value: <span id="motor4"></span></p>
+  <p1>:المحرك الخامس</p1>
+  <input type="range" min="0" max="180" value="90" class="slider4" id="myRange5">
+<p>Value: <span id="motor5"></span></p>
+<p1>:المحرك السادس</p1>
+<input type="range" min="0" max="180" value="90" class="slider4" id="myRange6">
+<p>Value: <span id="motor6"></span></p>
+
+  <button type="save">save</button>
+  <button>run1q</button>
+</div></form>
+<script>
+var slider1 = document.getElementById("myRange1");
+var output1 = document.getElementById("motor1");
+output1.innerHTML = slider1.value;
+slider1.oninput = function() {
+  output1.innerHTML = this.value;
+}
+var slider2 = document.getElementById("myRange2");
+var output2 = document.getElementById("motor2");
+output2.innerHTML = slider2.value;
+slider2.oninput = function() {
+  output2.innerHTML = this.value;
+}
+var slider3 = document.getElementById("myRange3");
+var output3 = document.getElementById("motor3");
+output3.innerHTML = slider3.value;
+slider3.oninput = function() {
+  output3.innerHTML = this.value;
+}
+var slider4 = document.getElementById("myRange4");
+var output4 = document.getElementById("motor4");
+output4.innerHTML = slider4.value;
+slider4.oninput = function() {
+  output4.innerHTML = this.value; 
+}
+var slider5 = document.getElementById("myRange5");
+var output5 = document.getElementById("motor5");
+output5.innerHTML = slider5.value;
+slider5.oninput = function() {
+  output5.innerHTML = this.value; 
+}
+var slider6 = document.getElementById("myRange6");
+var output6 = document.getElementById("motor6");
+output6.innerHTML = slider6.value;
+slider6.oninput = function() {
+  output6.innerHTML = this.value; 
+}
+</script>
+
+</body>
+</html>
